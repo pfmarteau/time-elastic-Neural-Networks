@@ -1461,7 +1461,6 @@ err_lm = 0;
 err_lmt = 0;
 lloss[0] = nepoch;
 
-reset_1DDarray(__epsi, NR, 1e-300);
 eps = 1e-10;  
  
 for(int epoch=1; epoch<=nepoch; epoch++){
