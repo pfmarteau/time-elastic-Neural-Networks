@@ -1575,7 +1575,7 @@ for(int epoch=1; epoch<=nepoch; epoch++){
           }
         }
     }// for nchunk
-    eps = cumul_sumSim/NX/NC*1e-3;
+    eps = cumul_sumSim/NX/NC*1e-6;
     
     // Fill the diagonal of the Ac matrix with 1.0
     /*for(int nr=0; nr<NR; nr++){
