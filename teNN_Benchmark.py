@@ -10,8 +10,7 @@ import argparse
 import utils as ut
 import teNNClassifierCEL as tenn 
 
-PATH="/home/marteau/LINUX/DATA/UCR_UEA_SKTIME/local_data/"
-#PATH = '/home/pfm/DATA/UCR_UEA_SKTIME/local_data/'
+PATH="./data/"
 
 def ranged_type(value_type, min_value, max_value):
     """
