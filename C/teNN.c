@@ -1416,10 +1416,6 @@ double *GAt0 = (double *)malloc(NR*LDIM*sizeof(double));
 double *GAc0 = (double *)malloc(NR*LL*sizeof(double));
 double *Lsim = (double *)malloc(NR*sizeof(double));
 double *vx;
-double *sumBestSim = (double *)calloc(NR,sizeof(double));
-double *sumBestMinSim = (double *)calloc(NR,sizeof(double));
-int *nbSumBestSim = (int *)calloc(NR,sizeof(int));
-double *__epsi = (double *)calloc(NR,sizeof(double));
 int *I = (int *)malloc(NX*sizeof(int));
 int *bestR;
 double binf_r=BINF, bsup_r=BSUP, epsiMax=1e300, epsi, epsi_lm, epsi_ml, avgPosSim;
@@ -1473,10 +1469,6 @@ for(int epoch=1; epoch<=nepoch; epoch++){
     
     shuffle(I,NX,(epoch==1));
     
-    avgPosSim = 0.0;
-    reset_1DDarray(sumBestSim, NR, 0.0);
-    reset_1DDarray(sumBestMinSim, NR, 1e300);
-    reset_1DIarray(nbSumBestSim, NR, 10000000);
     err = 0;
     nrm_gr=0; nrm_gAt=0; nrm_gAc=0;
     loss = 0;
@@ -1515,12 +1507,6 @@ for(int epoch=1; epoch<=nepoch; epoch++){
 	    sumSim = 1e-300;
             for(int nc=0; nc<NC; nc++){
                c = bestR[nc];
-               if(yR[c]==y[I[n]] && c==best_ref){
-         	   sumBestSim[c] += Lsim[c];
-         	   nbSumBestSim[c] += 1;
-         	   }
-               sumBestMinSim[c]=Lsim[closest_neg_ref];
-               avgPosSim += Lsim[c];
                sumSim += Lsim[c];
 	       }
             cumul_sumSim +=   sumSim;
@@ -1535,7 +1521,7 @@ for(int epoch=1; epoch<=nepoch; epoch++){
                       teNNCell_grads(dim, vx, L, (double *)(R+c*LDIM), L, (double *)(At+c*LDIM), (double *)(Ac+c*LL), epsilon, corridor_radius, 
                	  				(double *)(GR0+c*LDIM), (double *)(GAt0+c*LDIM), (double *)(GAc0+c*LL), -1.0/sumSim);
                  }
-                 else if(yR[c] == y[I[n]] && c == best_pos_ref){
+                 else if(c == best_pos_ref){
                    loss_cce -= log(Lsim[c]/sumSim+1e-300);
                    teNNCell_grads(dim, vx, L, (double *)(R+c*LDIM), L, (double *)(At+c*LDIM), (double *)(Ac+c*LL), epsilon, corridor_radius, 
                	   				(double *)(GR0+c*LDIM), (double *)(GAt0+c*LDIM), (double *)(GAc0+c*LL), (1.0/Lsim[c] -1.0/sumSim));		
