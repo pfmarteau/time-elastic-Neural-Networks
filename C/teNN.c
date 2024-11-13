@@ -1479,7 +1479,6 @@ for(int epoch=1; epoch<=nepoch; epoch++){
        cpy_1Darray(At_p, At, NR*LDIM*SZDBL);
        cpy_1Darray(Ac_p, Ac, NR*LL*SZDBL);
 
-      
       for(int nc=0; nc<nchunk; nc++){
           reset_1DDarray(GR0, NR*LDIM, 0.0);
           reset_1DDarray(GAt0, NR*LDIM, 0.0);
