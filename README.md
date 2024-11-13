@@ -29,7 +29,7 @@ $ python3  teNN_Benchmark.py --dataset BME --no_display --nu0 1e-6 --batch_size 
 ### The attention matrices (vectors) for each category. The final class reference time series is given in blue dotted lines.
 <img src="figs/BMEAttention_d0_0.png" width="30%" height="30%"/><img src="figs/BMEAttention_d0_1.png" width="30%" height="30%"/><img src="figs/BMEAttention_d0_2.png" width="30%" height="30%"/>
 
-Please cite this article if you wish to reference teNN:
+If you wish to reference teNN, please cite this draft paper:
 
 <a name="1"></a>
 [1] Marteau, P.F., Times Elastic Neural Networks, preprint, May 2024, arXiv:2405.17516, 
