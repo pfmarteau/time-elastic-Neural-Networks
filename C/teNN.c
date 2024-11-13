@@ -1418,7 +1418,7 @@ double *Lsim = (double *)malloc(NR*sizeof(double));
 double *vx;
 int *I = (int *)malloc(NX*sizeof(int));
 int *bestR;
-double binf_r=BINF, bsup_r=BSUP, epsiMax=1e300, epsi, epsi_lm, epsi_ml, avgPosSim;
+double binf_r=BINF, bsup_r=BSUP, epsiMax=1e300, epsi;
 double sz, nrm, nrm_gr, nrm_gAt, nrm_gAc, _epsip=1e-300;
 int nchunk;
 int n0, progress=0, _progress=1;
@@ -1593,7 +1593,6 @@ for(int epoch=1; epoch<=nepoch; epoch++){
        cpy_1Darray(At_ml, At, NR*LDIM*SZDBL);
        cpy_1Darray(Ac_ml, Ac, NR*LL*SZDBL);
        err_ml = err;
-       epsi_ml = _epsi;
        }
 
       //if ((minerr>err) || (err==0 && loss<=minloss)){
@@ -1603,7 +1602,6 @@ for(int epoch=1; epoch<=nepoch; epoch++){
        cpy_1Darray(At_lm, At, NR*LDIM*SZDBL);
        cpy_1Darray(Ac_lm, Ac, NR*LL*SZDBL);
        err_lmt = err;
-       epsi_lm = _epsi;
        }
     //}//if _progress
     errp = err;
