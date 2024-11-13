@@ -33,5 +33,5 @@ Please cite this article if you wish to reference teNN:
 
 <a name="#1">
    [1] </a> 
-Marteau, P.F., Times Elastic Neural Networks, preprint, [ArXiv May 2024](https://arxiv.org/abs/2405.17516), [bibtex][./bibtex/marteau2024.bib](./bibtex/marteau2024.bib)
+Marteau, P.F., Times Elastic Neural Networks, preprint, [ArXiv May 2024](https://arxiv.org/abs/2405.17516), [bibtex](./bibtex/marteau2024.bib)
 
