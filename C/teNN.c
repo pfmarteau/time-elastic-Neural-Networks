@@ -1535,7 +1535,7 @@ for(int epoch=1; epoch<=nepoch; epoch++){
                       teNNCell_grads(dim, vx, L, (double *)(R+c*LDIM), L, (double *)(At+c*LDIM), (double *)(Ac+c*LL), epsilon, corridor_radius, 
                	  				(double *)(GR0+c*LDIM), (double *)(GAt0+c*LDIM), (double *)(GAc0+c*LL), -1.0/sumSim);
                  }
-                 else if(yR[c] == y[I[n]]){
+                 else if(yR[c] == y[I[n]] && c == best_pos_ref){
                    loss_cce -= log(Lsim[c]/sumSim+1e-300);
                    teNNCell_grads(dim, vx, L, (double *)(R+c*LDIM), L, (double *)(At+c*LDIM), (double *)(Ac+c*LL), epsilon, corridor_radius, 
                	   				(double *)(GR0+c*LDIM), (double *)(GAt0+c*LDIM), (double *)(GAc0+c*LL), (1.0/Lsim[c] -1.0/sumSim));		
