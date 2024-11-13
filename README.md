@@ -32,5 +32,5 @@ $ python3  teNN_Benchmark.py --dataset BME --no_display --nu0 1e-6 --batch_size 
 Please cite this article if you wish to reference teNN:
 
 <a name="#1">
-   [1] </a> Marteau, P.F., Times Elastic Neural Networks, preprint, [ArXiv May 2024](https://arxiv.org/abs/2405.17516), [bibtex](bibtex/marteau2024.bib)
+   [1] </a> Marteau, P.F., Times Elastic Neural Networks, preprint, [ArXiv May 2024](https://arxiv.org/abs/2405.17516), [bibtex]([bibtex/marteau2024.bib](https://github.com/pfmarteau/teNN/blob/main/bibtex/marteau2024.bib))
 
