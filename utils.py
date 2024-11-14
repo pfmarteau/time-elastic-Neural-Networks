@@ -219,11 +219,11 @@ def getUCRFile(file, normalize=False):
     #return np.array(X,dtype='object'), np.array(y,dtype='object')
     return np.array(X), np.array(y)
 
-def loadTrainTestUCR_UEAProblem(dataset, normalize=False, path=path0):
-   filename=path+dataset+'/'+dataset+'_TRAIN.ts'
+def loadTrainTestUCR_UEAProblem(dataset, normalize=False, path=path0, ext='.ts'):
+   filename=path+dataset+'/'+dataset+'_TRAIN'+ext
    Xtrain, ytrain = getUCRFile(filename)
    #split_on_y(Xtrain, ytrain)
-   filename=path+dataset+'/'+dataset+'_TEST.ts'
+   filename=path+dataset+'/'+dataset+'_TEST'+ext
    Xtest, ytest = getUCRFile(filename)
    labs = np.unique(ytrain)
    '''for lab in labs:
