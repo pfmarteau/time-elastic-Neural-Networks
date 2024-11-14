@@ -1,6 +1,6 @@
 # teNN, Time Elastic Neural Networks
 ### Implementation of teNN (Time Elastic Neural Networks) defined and experimented in \[[1](#1)\]. The teNN code itself is written in C and its Python wrapper uses the foreign ctype library.
-<img src="figs/teNN-0.png" width="40%" height="40%"/><img src="figs/bestReference.png" width="50%" height="50%"/>
+<img src="figs/teNN-0.png" width="40%" height="40%"/><img src="figs/bestReference.png" width="60%" height="60%"/>
 ## Requirements 
 - gcc compiler
 - python3.*
