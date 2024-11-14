@@ -6,9 +6,7 @@ import numpy as np
 import random
 from sklearn.model_selection import train_test_split
 
-path0='/home/pfm/DATA/UCR_UEA_SKTIME/'
-#path0='/home/marteau/LINUX/DATA/UCR_UEA_SKTIME/local_data/'
-
+path0='./data'
   
 def sigmoid(x,lmbda):
     return 1.0/(1.0+np.exp(-lmbda*x))
