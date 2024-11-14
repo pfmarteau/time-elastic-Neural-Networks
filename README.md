@@ -1,7 +1,7 @@
 # teNN, Time Elastic Neural Networks
 ### Implementation of teNN (Time Elastic Neural Networks) defined and experimented in \[[1](#1)\]. The teNN code itself is written in C and its Python wrapper uses the foreign ctype library.
 
-The teNN architecture is based on the theory of time-elastic kernels and is mainly dedicated to the classification of univariate or multivariate time series. This atypical type of neural network architecture integrates a specific attention mechanism capable of handling temporal elasticity. In addition, teNN integrates a neuron pruning strategy that, while dynamically reshaping the neural architecture itself, allows to drastically reduce the number of model parameters. teNN is efficiently trained using stochastic gradient descent. Finally, it provides interpretable results and contributes to the explainable AI initiative.
+The teNN architecture is based on the theory of time-elastic kernels and is mainly dedicated to the classification of univariate or multivariate time series. This atypical type of neural network architecture integrates a specific attention mechanism capable of handling temporal elasticity. In addition, teNN integrates a neuron pruning strategy (based on their inactivation) that, while dynamically reshaping the neural architecture itself, allows to drastically reduce the number of model parameters. teNN is efficiently trained using stochastic gradient descent. Finally, it provides interpretable results and contributes to the explainable AI initiative.
 
 <img src="figs/teNN-0.png" width="40%" height="40%"/><img src="figs/teNN.png" width="40%" height="40%"/>
 
