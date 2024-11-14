@@ -1479,12 +1479,12 @@ for(int epoch=1; epoch<=nepoch; epoch++){
        cpy_1Darray(At_p, At, NR*LDIM*SZDBL);
        cpy_1Darray(Ac_p, Ac, NR*LL*SZDBL);
 
-      for(int nc=0; nc<nchunk; nc++){
+      for(int nck=0; nck<nchunk; nck++){
           reset_1DDarray(GR0, NR*LDIM, 0.0);
           reset_1DDarray(GAt0, NR*LDIM, 0.0);
           reset_1DDarray(GAc0, NR*LL, 0.0);
 
-          for(int n=nc*batch_size; n<_min(NX,(nc+1)*batch_size); n++){
+          for(int n=nck*batch_size; n<_min(NX,(nck+1)*batch_size); n++){
             vx = (double *)(X+I[n]*LDIM);
             
             for(int nr=0; nr<NR; nr++){
