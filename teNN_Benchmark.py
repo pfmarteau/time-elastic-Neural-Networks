@@ -104,9 +104,8 @@ normalize = False
 if args.normalize == "True":
    normalize = True
        
-Xtrain, ytrain, Xtest, ytest = ut.loadDataUCR_UEA(args.dataset, split=0, normalize=normalize, path = PATH)
+Xtrain, ytrain, Xtest, ytest = ut.loadDataUCR_UEA(args.dataset, split=0, normalize=normalize, path = PATH, ext='')
 
-    
 if args.split>0:
     print("SPLIT TRAIN TEST RATIO :", args.split)
     X = np.concatenate((Xtrain,Xtest)) 
