@@ -3,7 +3,7 @@
 
 <img src="figs/teNN-0.png" width="40%" height="40%"/><img src="figs/teNN.png" width="40%" height="40%"/>
 
-The teNN architecture is based on the theory of time-elastic kernels. This new type of neural network architecture integrates a specific attention mechanism capable of handling temporal elasticity. In addition, teNN integrates a neuron pruning strategy that allows to drastically reduce the number of model parameters. Finally, it provides interpretable results and contributes to the explainable AI initiative.\
+The teNN architecture is based on the theory of time-elastic kernels. This new type of neural network architecture integrates a specific attention mechanism capable of handling temporal elasticity. In addition, teNN integrates a neuron pruning strategy that allows to drastically reduce the number of model parameters. Finally, it provides interpretable results and contributes to the explainable AI initiative.
 
 
 ## Requirements 
