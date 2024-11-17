@@ -101,7 +101,6 @@ def max_min_normalize_X(X,mx,mn):
 
     return Xout
 
-
 def mean_std_X(X):
     N,L,dim = np.shape(X)
     mean = np.zeros(dim)
@@ -125,7 +124,6 @@ def z_normalize_X(X,mean,std):
             Xnz[n,:,d] = (X[n,:,d]-mean[d])/std[d]
 
     return Xnz
-
 
 
 def z_normalize_ts(ts):
@@ -228,19 +226,7 @@ def loadTrainTestUCR_UEAProblem(dataset, normalize=False, path=path0):
    filename=path+dataset+'/'+dataset+'_TEST.ts'
    Xtest, ytest = getUCRFile(filename, normalize=normalize)
    labs = np.unique(ytrain)
-   '''for lab in labs:
-     for i in range(len(ytrain)):
-        if lab == ytrain[i]:
-           plt.plot(Xtrain[i])
-           break
-   plt.show()'''
    print('#Train:'+str(len(Xtrain)), '#Test:'+str(len(Xtest)), 'length:',len(Xtrain[0]), 'dim:',len(Xtrain[0][0]), '#labs',len(labs))
-
-   '''if normalize:
-       mx,mn = max_min_X(Xtrain)
-       print("max/min normalizing with mx:",mx, "mn:",mn)
-       Xtrain = max_min_normalize_X(Xtrain,mx,mn)
-       Xtest = max_min_normalize_X(Xtest,mx,mn)'''
        
    #return np.array(Xtrain, dtype='object'), np.array(ytrain, dtype='object'), np.array(Xtest,dtype='object'), np.array(ytest,dtype='object')
    return np.array(Xtrain), np.array(ytrain), np.array(Xtest), np.array(ytest)
