@@ -1641,7 +1641,7 @@ for(int epoch=1; epoch<=nepoch; epoch++){
        fflush(stdout); 
     }
 
-    if (eta < 1e-16 || loss<=0){
+    if (eta < 1e-10 || loss<=1e-8){
         keepRunning=0;
         if(verbose)  
             fprintf(stdout,"OUT WITH MINLOSS=%.2e eta=%.2e %d\n", minloss, eta, NX);
