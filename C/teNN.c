@@ -1299,7 +1299,7 @@ double *out_probas = (double *)malloc(NX*NC*sizeof(double));
 double *Lsim = (double *)malloc(NR*sizeof(double));
 double *vx, s, sumSim;
 double *r, *at, *ac;
-int best_ref, *bestR, err;
+int best_ref, *bestR, err, nc;
 int LDIM=L*dim, LL=L*L;
 err=0;
 for(int n=0; n<NX; n++){
