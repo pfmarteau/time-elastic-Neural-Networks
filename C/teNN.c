@@ -1307,15 +1307,18 @@ for(int n=0; n<NX; n++){
   sumSim = 0;
   for(int nr=0; nr<NR; nr++){
     s = teNNCell(dim, vx, L, (double *)(R+nr*LDIM), L, (double *)(At+nr*LDIM), (double *)(Ac+nr*LL), epsilon, corridor_radius);
-    if (isnan(s))
-      s=0.0;
-    Lsim[nr] = s + 1e-292;
+    if (isnan(s)){
+          s = 1e-300;
+          }
+    else if (!isfinite(s) || s >1e300)
+          s = 1e300;    
     sumSim += s;
     }
 
   bestR = getBestRef(NC, yc, NR, yR, Lsim, &best_ref);
   for(int c=0; c<NC; c++){
-     *(out_probas+n*NC+c) = Lsim[c]/sumSim;
+     nc = bestR[c];
+     *(out_probas+n*NC+c) = Lsim[nc]/sumSim;
      }
   free(bestR);
   }
