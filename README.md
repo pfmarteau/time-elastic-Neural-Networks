@@ -20,6 +20,9 @@ $ sh compile.sh
 ## Testing teNN on BME UCR dataset
 $ python3  teNN_Benchmark.py --dataset BME --no_display --nu0 1e-6 --batch_size 64 --eta 1e-2 --nclusters 1 --lambda_At 1e-4 --lambda_Ac 1e-4 --corridor_radius 500
 
+<span style="color:red">To stop the training process, type ^C (Ctrl c)</span>.
+
+
 ## [BME](https://www.timeseriesclassification.com/description.php?Dataset=BME) dataset
 ### Training loss
 <img src="figs/BME_loss.png" width="40%" height="40%" style="display: block; margin: 0 auto" />
