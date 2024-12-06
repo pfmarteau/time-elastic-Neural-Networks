@@ -75,7 +75,7 @@ $$\color{red}{\text{To stop the training process, type ctrl-c.}}$$
 |UWaveGestureLibrary|90.9|89.1|85.0|85.0|89.7|89.4|90.0|90.3|86.9|90.3|90.3|90.3|
 
 ### Critical Difference Diagramm of average ranks (the higher the better)
-<img src="figs/CriticalDifferenceDiagram.png" width="70%" height="30%"/>
+<img src="figs/CriticalDifferenceDiagram.png" width="90%" height="30%"/>
 
 ### If you wish to reference teNN, please cite this draft paper:
 
