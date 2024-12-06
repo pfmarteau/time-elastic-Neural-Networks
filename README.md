@@ -49,7 +49,7 @@ $$\color{red}{\text{To stop the training process, type ctrl-c.}}$$
 |CharacterTrajectories|98.8|99.4|98.7|99.4|97.9|98.3|98.5|99.0|96.9|99.0|99.4|99.4|
 |Cricket|98.6|97.7|93.1|97.2|98.6|97.2|98.6|98.6|98.6|100|98.6|98.6|
 |DuckDuckGeese|36.0|50.0|36.0|24.0|37.5|40.0|40.0|57.5|55|60.0|46.0|46.0|
-|EigenWorms|52.7|59.3|42.0|42.0|52.7|55|100|89.0|60.3|61.8|0.0|0.0|
+|EigenWorms|52.7|59.3|42.0|42.0|52.7|55|100|89.0|60.3|61.8|0.0(*)|0.0(*)|
 |Epilepsy|99.3|89.0|99.3|99.3|98.6|97.8|98.6|99.3|97.8|96.4|90.6|90.6|
 |Ering|93.0|91.11|90.4|93.0|20|13.3|13.3|13.3|13.3|13.3|97.4|97.4|
 |EthanolConcentration|34.9|27.8|32.3|31.6|37.2|42.2|43.3|31.6|30.4|32.3|36.5|36.5|
@@ -73,6 +73,8 @@ $$\color{red}{\text{To stop the training process, type ctrl-c.}}$$
 |SpokenArabicDigits|98.7|98.6|98.4|98.3|97.3|97.0|96.8|98.2|96.0|96.3|97.7|97.7|
 |StandWalkJump|40.0|33.3|40.0|40.0|40.0|33.3|46.7|33.3|33.3|20.0|53.3|53.3|
 |UWaveGestureLibrary|90.9|89.1|85.0|85.0|89.7|89.4|90.0|90.3|86.9|90.3|90.3|90.3|
+
+(*) The current implementation of teNN  does not allow to handle this dataset.
 
 ### Critical Difference Diagramm of average ranks (the higher the better)
 <img src="figs/CriticalDifferenceDiagram.png" width="90%" height="30%"/>
