@@ -74,7 +74,8 @@ $$\color{red}{\text{To stop the training process, type ctrl-c.}}$$
 |StandWalkJump|40.0|33.3|40.0|40.0|40.0|33.3|46.7|33.3|33.3|20.0|53.3|53.3|
 |UWaveGestureLibrary|90.9|89.1|85.0|85.0|89.7|89.4|90.0|90.3|86.9|90.3|90.3|90.3|
 
-<img src="figs/CriticalDifferenceDiagram.png" width="30%" height="30%"/>
+### Critical Difference Diagramm of average ranks (the higher the better)
+<img src="figs/CriticalDifferenceDiagram.png" width="70%" height="30%"/>
 
 ### If you wish to reference teNN, please cite this draft paper:
 
