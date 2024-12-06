@@ -41,7 +41,7 @@ $$\color{red}{\text{To stop the training process, type ctrl-c.}}$$
 **IT** (Inception time NN), **D-CNN** (Dilated Convolutional Neural Network), **FCN** (fully connected convolutional network), **ResNet**, **LCEM** (Local Cascade Ensemble for Multivariate data), **XGBM** (Extreme Gradient Boosting for Multivariate data), **RFM** (Random Forest for Multivariate data), **WEASEL + MUSE** (Word ExtrAction for time SEries cLassification plus Multivariate Unsupervised Symbols and dErivative), **DTW-I** (1-Nearest Neighbor classifier based on the sum of DTW distance for each dimension), **DTW-D** (1-Nearest Neighbor classifier based on multi-dimensional points), **teNN-lm** (teNN at last minimum train error), **teNN-ml** (teNN at minimum training loss)
 
 
-| Datasets |IT|D-CNN|FCN|ResNet|LCEM|XGBM|RFM| WEASEL- MUSE |DTW-1NN-I |DTW-1NN-D |teNN-lm| teNN-ml |
+|Datasets|teNN-lm|teNN-ml|IT|D-CNN|FCN|ResNet|LCEM|XGBM|RFM|WEASEL+MUSE|DTW-1NN-I|DTW-1NN-D|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 |Datasets|teNN-lm|teNN-ml|IT|D-CNN|FCN|ResNet|LCEM|XGBM|RFM|WEASEL+MUSE|DTW-1NN-I|DTW-1NN-D|
 |ArticularyWordRecognition|98.3|98.3|98.7|98.7|98.0|98.0|99.3|99.0|99.0|99.3|98.0|98.7|
