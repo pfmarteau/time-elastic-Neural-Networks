@@ -1093,14 +1093,18 @@ void teNNCell_grads(const unsigned int dim, const double *va, const unsigned int
     // I:dim: dimension of multivariate time series va and vb
     // I:la: length of time series va
     // I:va: multivariate time series va
+    // I:ref: multivariate reference time series vref
     // I:lr: length of reference time series ref
-    // I:ref: multivariate reference time series vbref
+    // I:At: Attention matrix
     // I:Ac: Activation matrix
     // I:epsilon: parameter of the local kernel (exp(-nu*delta(va(i),vb(j)),epsilon)
     // I:corridor_radius: parameter defining the alignment search paths around the main diagonal
-    // O:Gr: gradient vector. SHOULD BE ALLOCATED BEFORE INVOCATION. 
+    // O:Gr: gradient vector for reference time series. SHOULD BE ALLOCATED BEFORE INVOCATION. 
+    // O:Gat: Attention gradient matrix. SHOULD BE ALLOCATED BEFORE INVOCATION. 
+    // O:Gac: Activation gradient matrix. SHOULD BE ALLOCATED BEFORE INVOCATION. 
+    // I: scalar: multiplicative coefficient applying to the gradients.
     // O:return value, void
-
+	
     double *lexp3 = (double *)calloc(lr+2, sizeof(double));
     double *dk = (double *)malloc(dim*sizeof(double));
     double *d2k = (double *)malloc(dim*sizeof(double));
