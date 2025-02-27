@@ -1,3 +1,6 @@
+// Implementation of the Time Elastic Neural Networks (teNN) 
+// Pierre-François Marteau, Time Elastic Neural Networks, May 2024, https://arxiv.org/abs/2405.17516
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
